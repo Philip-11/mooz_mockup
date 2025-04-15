@@ -14,7 +14,7 @@ require_once 'lib/common.php'
 <body>
 
     <main>
-        <div class="container shadow-lg bg-body-tertiary rounded sticky-top">
+        <div class="container shadow-lg bg-body-tertiary rounded">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
                 <div class="col-md-3 mb-2 mb-md-0">
                     <a href="index.php" class="d-flex align-items-center mb-3 mb-lg-0 me-md-auto fs-3 link-body-emphasis text-decoration-none">
@@ -99,6 +99,67 @@ require_once 'lib/common.php'
                 </div>
 
 
+            </div>
+        </section>
+
+        <section class="container px-4 py-5 shadow">
+            <h2 class="text-center fw-bold pb-2">Trusted by many, loved by many</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-2 g-4">
+                <div class="col">
+                    <div class="d-flex align-items-center px-3">
+                        <div style="width: 10rem; height: 10rem; border-radius: 100%; overflow:hidden; " class="px-3">
+                            <img src="public/id1.jpg" style="object-fit:cover;" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            <h4>Johnyela Mayo</h4>
+                            <h5>Virtual Assistant</h5>
+                            <p class="fw-semibold py-3">Mooz really changes how I communicate with my clients. Truly revolutionary. <br> ⭐⭐⭐⭐⭐</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex align-items-center px-3">
+                        <div style="width: 10rem; height: 10rem; border-radius: 100%; overflow:hidden; " class="px-3">
+                            <img src="public/id2.jpg" style="object-fit:cover;" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            <h4>John Philip Magsaysay</h4>
+                            <h5>Virtual Assistant</h5>
+                            <p class="fw-semibold py-3">Mooz really changes how I communicate with my clients. Truly revolutionary. <br> ⭐⭐⭐⭐⭐</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex align-items-center px-3">
+                        <div style="width: 10rem; height: 10rem; border-radius: 100%; overflow:hidden; " class="px-3">
+                            <img src="public/id2.jpg" style="object-fit:cover;" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            <h4>John Philip Magsaysay</h4>
+                            <h5>Virtual Assistant</h5>
+                            <p class="fw-semibold py-3">Mooz really changes how I communicate with my clients. Truly revolutionary. <br> ⭐⭐⭐⭐⭐</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex align-items-center px-3">
+                        <div style="width: 10rem; height: 10rem; border-radius: 100%; overflow:hidden; " class="px-3">
+                            <img src="public/id1.jpg" style="object-fit:cover;" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            <h4>Johnyela Mayo</h4>
+                            <h5>Virtual Assistant</h5>
+                            <p class="fw-semibold py-3">Mooz really changes how I communicate with my clients. Truly revolutionary. <br> ⭐⭐⭐⭐⭐</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
     </main>
