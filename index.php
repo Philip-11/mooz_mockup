@@ -14,7 +14,7 @@ require_once 'lib/common.php'
 <body>
 
     <main>
-        <div class="container shadow-lg bg-body-tertiary rounded">
+        <div class="container shadow-lg bg-body-tertiary rounded sticky-top">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
                 <div class="col-md-3 mb-2 mb-md-0">
                     <a href="index.php" class="d-flex align-items-center mb-3 mb-lg-0 me-md-auto fs-3 link-body-emphasis text-decoration-none">
@@ -37,12 +37,7 @@ require_once 'lib/common.php'
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-2" href="">
-                            Business
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-2" href="">
-                            Education
+                            FAQ
                         </a>
                     </li>
                 </ul>
@@ -68,8 +63,43 @@ require_once 'lib/common.php'
             </div>
         </section>
 
-        <section class="container">
+        <section class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">Features of <strong>Mooz</strong></h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col d-flex align-items-start">
+                    <img class="flex-shrink-0 me-3" src="public/paragraph-capital-svgrepo-com.svg" width="30" height="52" alt="Captions Icon">
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Subtitles</h3>
+                        <p>You can now understand what your <strong>Cow</strong>orker's speaking even if its gibberish!</p>
+                    </div>
+                </div>
 
+                <div class="col d-flex align-items-start">
+                    <img class="flex-shrink-0 me-3" src="public/people-gesture-svgrepo-com.svg" width="30" height="52" alt="Captions Icon">
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Sign Language Support</h3>
+                        <p>For users that has fingers and can do it. Uses cutting-edge technology detector and supports <strong>cows</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start">
+                    <img class="flex-shrink-0 me-3" src="public/lamp-svgrepo-com.svg" width="30" height="52" alt="Captions Icon">
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Lighting</h3>
+                        <p>Having problems in finding the right lighting? No worries, with <strong>Mooz,</strong> you don't need to worry about finding the right spot in your room.</p>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start">
+                    <img class="flex-shrink-0 me-3" src="public/groups-svgrepo-com.svg" width="30" height="52" alt="Captions Icon">
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Real-time Collab</h3>
+                        <p>Video meeting? Group Chats? Any kind of collab is right here in <strong>Mooz</strong>.</p>
+                    </div>
+                </div>
+
+
+            </div>
         </section>
     </main>
 
