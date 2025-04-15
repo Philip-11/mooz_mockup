@@ -102,7 +102,7 @@ require_once 'lib/common.php'
             </div>
         </section>
 
-        <section class="container px-4 py-5 shadow">
+        <section class="container px-4 py-5 shadow rounded">
             <h2 class="text-center fw-bold pb-2">Trusted by many, loved by many</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-2 g-4">
                 <div class="col">
@@ -161,6 +161,58 @@ require_once 'lib/common.php'
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="container d-flex my-4 px-4 py-5 rounded shadow">
+            <div class="bg-secondary-subtle rounded m-4 p-4">
+                <div>
+                    <h2 class="fw-bold">Get Started with Mooz</h2>
+                    <p>Sign up for free or choose from one of our flexible plans that meet your unique needs</p>
+                    <button class="btn btn-primary rounded-pill">View pricing</button>
+                </div>
+
+                <div class="d-flex justify-content-between text-center m-4 p-4">
+                    <div class="bg-secondary p-2 rounded ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-android" viewBox="0 0 16 16">
+                            <path d="M2.76 3.061a.5.5 0 0 1 .679.2l1.283 2.352A8.9 8.9 0 0 1 8 5a8.9 8.9 0 0 1 3.278.613l1.283-2.352a.5.5 0 1 1 .878.478l-1.252 2.295C14.475 7.266 16 9.477 16 12H0c0-2.523 1.525-4.734 3.813-5.966L2.56 3.74a.5.5 0 0 1 .2-.678ZM5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+
+                    <div class="bg-secondary p-2 rounded ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-android" viewBox="0 0 16 16">
+                            <path d="M2.76 3.061a.5.5 0 0 1 .679.2l1.283 2.352A8.9 8.9 0 0 1 8 5a8.9 8.9 0 0 1 3.278.613l1.283-2.352a.5.5 0 1 1 .878.478l-1.252 2.295C14.475 7.266 16 9.477 16 12H0c0-2.523 1.525-4.734 3.813-5.966L2.56 3.74a.5.5 0 0 1 .2-.678ZM5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+
+                    <div class="bg-secondary p-2 rounded ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-android" viewBox="0 0 16 16">
+                            <path d="M2.76 3.061a.5.5 0 0 1 .679.2l1.283 2.352A8.9 8.9 0 0 1 8 5a8.9 8.9 0 0 1 3.278.613l1.283-2.352a.5.5 0 1 1 .878.478l-1.252 2.295C14.475 7.266 16 9.477 16 12H0c0-2.523 1.525-4.734 3.813-5.966L2.56 3.74a.5.5 0 0 1 .2-.678ZM5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="bg-secondary-subtle rounded m-4 p-4">
+                    <div>
+                        <h2 class="fw-bold">Already a customer?</h2>
+                        <p>Download Mooz to experience revolutionary video conferencing</p>
+                        <a href="" class="fs-5">Download now ></a>
+                    </div>
+                </div>
+
+                <div class="bg-secondary-subtle rounded m-4 p-4">
+                    <div>
+                        <h2 class="fw-bold">Request more information</h2>
+                        <p>Learn more from our team of experts</p>
+                        <a href="" class="fs-5">Learn more ></a>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 
