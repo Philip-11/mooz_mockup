@@ -7,7 +7,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <div class="col-md-3 mb-2 mb-md-0">
             <a href="<?php echo BASE_URL; ?>index.php" class="d-flex align-items-center mb-3 mb-lg-0 me-md-auto fs-3 link-body-emphasis text-decoration-none">
-                <img style="width: 25px; height: 100%; margin: 10px" src="<?php echo BASE_URL; ?>public/cow-svgrepo-com.svg" alt="A cow" srcset="">
+                <img style="width: 25px; height: 100%; margin: 10px" src="<?= BASE_URL; ?>public/index/cow-svgrepo-com.svg" alt="A cow" srcset="">
                 <span>Mooz</span>
             </a>
         </div>
@@ -32,8 +32,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         </ul>
 
         <div class="col-md-3 text-end">
-            <button class="btn btn-outline-primary me-2">Login</button>
-            <button class="btn btn-primary">Signup</button>
+            <a class="btn btn-outline-primary me-2" href="<?php echo BASE_URL ?>pages/login.php">Login</a>
+            <a class="btn btn-primary me-2" href="<?php echo BASE_URL ?>pages/signup.php">Signup</a>
         </div>
     </header>
 </div>
