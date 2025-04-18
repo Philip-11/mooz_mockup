@@ -20,7 +20,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 <a class="nav-link px-2 <?php echo ($currentPage === 'features.php') ? 'link-secondary' : ''; ?>" href="<?php echo BASE_URL; ?>pages/features.php">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2 <?php echo ($currentPage === 'pricing.php') ? 'link-secondary' : ''; ?>" href="">
+                <a class="nav-link px-2 <?php echo ($currentPage === 'pricing.php') ? 'link-secondary' : ''; ?>" href="<?php echo BASE_URL; ?>pages/pricing.php">
                     Pricing
                 </a>
             </li>
