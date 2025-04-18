@@ -1,6 +1,8 @@
 <?php
 require_once '../lib/connect.php';
 
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = htmlEscape($_POST['email']);
     $password = htmlEscape($_POST['password']);
@@ -48,8 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input class="form-control <?php echo ($loginFailed == true) ? 'is-invalid' : '' ?>" type="email" name="email" id="email" placeholder="name@example.com" required>
                         <label for="email">Email address</label>
                         <div id="email" class="invalid-feedback">
-                            Please input an email.
+                            Please check the email you typed.
                         </div>
+
 
                     </div>
 
@@ -57,8 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input class="form-control <?php echo ($loginFailed == true) ? 'is-invalid' : '' ?>" type="password" name="password" id="password" placeholder="password" required>
                         <label for="password">Password</label>
                         <div id="email" class="invalid-feedback">
-                            Please input a password.
+                            Please check the password you typed.
                         </div>
+
+
                     </div>
 
                     <div class="form-check text-start my-3">

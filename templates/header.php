@@ -32,8 +32,17 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         </ul>
 
         <div class="col-md-3 text-end">
-            <a class="btn btn-outline-primary me-2" href="<?php echo BASE_URL ?>pages/login.php">Login</a>
-            <a class="btn btn-primary me-2" href="<?php echo BASE_URL ?>pages/signup.php">Signup</a>
+            <?php
+            if (isset($_SESSION['logged_in'])) {
+                echo '<a class="btn btn-primary me-2" href="' . BASE_URL . 'logout.php">Logout</a>';
+            } else {
+                echo '
+                <a class="btn btn-outline-primary me-2" href="' . BASE_URL . 'pages/login.php">Login</a>
+                <a class="btn btn-primary me-2" href="' . BASE_URL . 'pages/signup.php">Signup</a>
+                ';
+            }
+            ?>
+
         </div>
     </header>
 </div>

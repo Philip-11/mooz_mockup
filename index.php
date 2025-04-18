@@ -24,8 +24,17 @@ require_once 'lib/common.php'
                     A revolutionary video-conferencing app. <br> Connect with your <strong>Cow</strong>orkers and <strong>Cow</strong>leagues.
                 </p>
                 <div class="d-sm-flex gap-2 justify-content-sm-center">
-                    <button class="btn btn-lg btn-outline-primary">Login</button>
-                    <button class="btn btn-lg btn-primary">Signup</button>
+                    <?php
+                    if (isset($_SESSION['logged_in'])) {
+                        echo '';
+                    } else {
+                        echo '
+                        <a class="btn btn-lg btn-outline-primary" href="' . BASE_URL . 'pages/login.php">Login</a>
+                        <a class="btn btn-lg btn-primary" href="' . BASE_URL . 'pages/signup.php">Signup</a>
+                        ';
+                    }
+
+                    ?>
                 </div>
             </div>
         </section>
@@ -135,7 +144,8 @@ require_once 'lib/common.php'
                 <div class="">
                     <h2 class="fw-bold">Get Started with Mooz</h2>
                     <p>Sign up for free or choose from one of our flexible plans that meet your unique needs</p>
-                    <button class="btn btn-primary rounded-pill">View pricing</button>
+                    <a class="btn btn-primary rounded-pill" href="<?php echo BASE_URL ?>pages/pricing.php">View Pricing</a>
+
                 </div>
 
                 <div class="d-flex flex-wrap flex-lg-nowrap gap-3 justify-content-between text-center m-4 p-4">

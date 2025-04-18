@@ -1,5 +1,18 @@
 <?php
-require_once '../lib/common.php'
+require_once '../lib/connect.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO users (email, password) VALUES (:email, :password)";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(array('email' => $email, 'password' => $hashed_password));
+
+    $registered = true;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +20,7 @@ require_once '../lib/common.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Signup</title>
 </head>
 
 <body>
@@ -20,12 +33,18 @@ require_once '../lib/common.php'
                     <img class="mb-4" src="<?php echo BASE_URL ?>public/index/cow-svgrepo-com.svg" width="50" height="50" alt="">
                     <h1 class="h3 mb-3 fw-normal">Signup</h1>
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="email" name="email" id="email" placeholder="name@example.com">
+                        <input class="form-control <?php echo ($registered == true) ? 'is-valid' : '' ?>" type="email" name="email" id="email" placeholder="name@example.com" required>
                         <label for="email">Email address</label>
+                        <div id="email" class="valid-feedback">
+                            Success!
+                        </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="password" name="password" id="password" placeholder="password">
+                        <input class="form-control <?php echo ($registered == true) ? 'is-valid' : '' ?>" type="password" name="password" id="password" placeholder="password" required>
                         <label for="password">Password</label>
+                        <div id="password" class="valid-feedback">
+                            Success!
+                        </div>
                     </div>
                     <div class="form-check text-start my-3">
                         <input type="checkbox" name="checkDefault" id="checkDefault" class="form-check-input" value="remember-me">

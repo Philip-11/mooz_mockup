@@ -94,11 +94,6 @@
             <table class="table text-center">
                 <thead>
                     <tr>
-                        <!-- <div class="form-check form-switch">
-                            <label class="form-check-text" for="switchCheck">Monthly</label>
-                            <input class="form-check-input" type="checkbox" role="switch" name="switchCheck" id="">
-                            <label class="form-check-text" for="switchCheck">Yearly</label>
-                        </div> -->
                         <th style="width: 33%;">
 
                         </th>
