@@ -12,7 +12,7 @@
 <body>
     <?php require '../templates/header.php' ?>
 
-    <main>
+    <main class="container py-3">
         <section class="container px-4 py-5">
             <div class="p-3 pb-md-4 mx-auto text-center">
                 <h1 class="display-4 fw-normal text-body-emphasis">Pricing</h1>
@@ -87,7 +87,155 @@
                 </div>
             </div>
 
+        </section>
 
+        <section class="container table-responsive">
+            <h2 class="display-6 text-center mb-4">Compare Features</h2>
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <!-- <div class="form-check form-switch">
+                            <label class="form-check-text" for="switchCheck">Monthly</label>
+                            <input class="form-check-input" type="checkbox" role="switch" name="switchCheck" id="">
+                            <label class="form-check-text" for="switchCheck">Yearly</label>
+                        </div> -->
+                        <th style="width: 33%;">
+
+                        </th>
+                        <th style="width: 28%;">Free</th>
+                        <th style="width: 28%;">Pro</th>
+                        <th style="width: 28%;">Business</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="text-start" scope="row">Users</th>
+                        <td>1</td>
+                        <td>1-50</td>
+                        <td>1-200</td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Meeting Duration</th>
+                        <td>1 hour</td>
+                        <td>30 hours</td>
+                        <td>30 hours</td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Participants</th>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Team Chat</th>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Notes</th>
+                        <td>
+
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Document</th>
+                        <td>
+
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Custom Avatar</th>
+                        <td>
+
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Voicemails</th>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Scheduler</th>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-start" scope="row">Whiteboard</th>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
