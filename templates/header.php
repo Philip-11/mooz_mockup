@@ -24,8 +24,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                     Pricing
                 </a>
             </li>
-            <li class="nav-item <?php echo ($currentPage === 'faq.php') ? 'link-secondary' : ''; ?>">
-                <a class="nav-link px-2" href="">
+            <li class="nav-item">
+                <a class="nav-link px-2 <?php echo ($currentPage === 'faq.php') ? 'link-secondary' : ''; ?>" href="<?php echo BASE_URL; ?>pages/faq.php">
                     FAQ
                 </a>
             </li>
