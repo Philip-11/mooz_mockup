@@ -1,3 +1,4 @@
+
 <?php
 require_once '../lib/connect.php';
 
@@ -70,8 +71,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="checkbox" name="checkDefault" id="checkDefault" class="form-check-input" value="remember-me">
                         <label class="form-check-label" for="checkDefault">Remember me</label>
                     </div>
+                    
                     <p class="mb-3 text-body-secondary">By proceeding, you agree to our terms and services</p>
+                    <div class="pb-2">
+                        <a href="">Forgot Password?</a>
+                    </div>
                     <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
+
                 </form>
             </div>
         </section>
