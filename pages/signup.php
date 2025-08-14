@@ -51,6 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label class="form-check-label" for="checkDefault">Remember me</label>
                     </div>
                     <p class="mb-3 text-body-secondary">By proceeding, you agree to our terms and services</p>
+                    <div class="pb-2">
+                        <a href="forgotpass.php">Forgot Password?</a>
+                    </div>
                     <button class="btn btn-primary w-100 py-2" type="submit">Signup</button>
                 </form>
             </div>

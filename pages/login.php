@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     
                     <p class="mb-3 text-body-secondary">By proceeding, you agree to our terms and services</p>
                     <div class="pb-2">
-                        <a href="">Forgot Password?</a>
+                        <a href="forgotpass.php">Forgot Password?</a>
                     </div>
                     <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
 
