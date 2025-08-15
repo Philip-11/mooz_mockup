@@ -1,6 +1,70 @@
 <?php 
 
 require_once '../lib/connect.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/libs/PHPMailer-master/src/PHPMailer.php';
+require $_SERVER['DOCUMENT_ROOT'] .'/libs/PHPMailer-master/src/SMTP.php';
+require $_SERVER['DOCUMENT_ROOT'] .'/libs/PHPMailer-master/src/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST')
+{
+    $email = htmlEscape($_POST['email'] ?? '');
+
+    if ($email)
+    {
+        $sql = "SELECT id FROM users WHERE email = :email";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(array('email' => $email));
+
+        if ($stmt->fetch())
+        {
+            //We generate token for security
+            $token = bin2hex(random_bytes(16));
+            $hashed_token = password_hash($token, PASSWORD_DEFAULT);
+            $expires = date("Y-m-d H:i:s", strtotime("+1 hour"));
+
+            //We store it in database
+            $sql2 = "UPDATE users SET reset_token = :reset_token, reset_expires = :reset_expires WHERE email = :email";
+            $stmt2 = $conn->prepare($sql2);
+            $stmt2->execute(array('reset_token' => $hashed_token, 'reset_expires' => $expires, 'email' => $email));
+
+            //The reset link
+            $resetLink = "https://philip-11.ct.ws/reset-password?email=" . urlencode($email) . "&token=" . $token;
+
+            $mail = new PHPMailer(true);
+            try {
+                $mail->isSMTP();
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = '';
+                $mail->Password = '';
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                $mail->Port = 587;
+
+                $mail->setFrom();
+                $mail->addAddress($email);
+
+                $mail->isHTML(true);
+                $mail->Subject = 'Password Reset Request';
+                $mail->Body = "Click the link below to reset your password:<br> <a href='$resetLink'>$resetLink</a><br><br> This link expires in 1 hour.";
+                $mail->AltBody = "Copy this link in your browser: $resetLink";
+
+                $mail->send();
+                echo "Check your email for a reset link";
+            } catch (Exception $e)
+            {
+                echo "Error sending the email: {$email->ErrorInfo}";
+            }
+        } else {
+            echo "Email not found";
+        }
+    }
+}
+
 
 ?>
 
