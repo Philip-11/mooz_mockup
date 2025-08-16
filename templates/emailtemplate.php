@@ -9,12 +9,13 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </head>
 <body style="font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px;">
-	<div style="max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">	
+	<div style="max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+		<img class="mb-4" src="/mooz_mockup/public/index/cow-svgrepo-com.svg" width="50" height="50" alt="Cow Icon">		
 		<h2 style="text-align: center; color: #333;">Mooz</h2>
 		<p>Hi <?= $email ?></p>
-		<p>We recieved a request to reset your password. Click the button below to proceed:</p>
+		<p>We recieved a request to reset your password. This link expires in 1 hour. Click the button below to proceed:</p>
 		<p style="text-align: center;">
-			<a href="" style="display: inline-block; padding: 12px 24px; background: #4CAF50; color: #fff; text-decoration: none; border-radius: 4px;">Reset your password</a>
+			<a href="<?= $resetLink ?>" style="display: inline-block; padding: 12px 24px; background: #4CAF50; color: #fff; text-decoration: none; border-radius: 4px;">Reset your password</a>
 		</p>
 		<p>If you did not request for a password reset, you can safely ignore this email.</p>
 		<hr>

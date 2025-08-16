@@ -51,8 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 $mail->addAddress($email);
 
                 $mail->isHTML(true);
-                $mail->Subject = 'Password Reset Request';
-                $mail->Body = "Click the link below to reset your password:<br> <a href='$resetLink'>$resetLink</a><br><br> This link expires in 1 hour.";
+                $mail->Subject = 'Password Reset Request on Mooz';
+                //Get email template with variables 
+                ob_start();
+                include '../templates/emailtemplate.php';
+                $body = ob_get_clean();
+                $mail->Body = $body;
                 $mail->AltBody = "Copy this link in your browser: $resetLink";
 
                 $mail->send();
