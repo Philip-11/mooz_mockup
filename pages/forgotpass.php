@@ -1,6 +1,7 @@
 <?php 
 
 require_once '../lib/connect.php';
+$config = require '../config.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/libs/PHPMailer-master/src/PHPMailer.php';
 require $_SERVER['DOCUMENT_ROOT'] .'/libs/PHPMailer-master/src/SMTP.php';
 require $_SERVER['DOCUMENT_ROOT'] .'/libs/PHPMailer-master/src/Exception.php';
@@ -32,20 +33,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $stmt2->execute(array('reset_token' => $hashed_token, 'reset_expires' => $expires, 'email' => $email));
 
             //The reset link
-            $resetLink = "https://philip-11.ct.ws/reset-password?email=" . urlencode($email) . "&token=" . $token;
+            $resetLink = "http://" . $config['local_ip'] . BASE_URL . "pages/resetpass.php?email=" . urlencode($email) . "&token=" . $token;
 
             $mail = new PHPMailer(true);
             try {
                 $mail->isSMTP();
-                $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-                $mail->Host = 'smtp.gmail.com';
+                //For debug purposes
+                // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+                $mail->Host = $config['smtp_host'];
                 $mail->SMTPAuth = true;
-                $mail->Username = '';
-                $mail->Password = '';
+                $mail->Username = $config['smtp_user'];
+                $mail->Password = $config['smtp_pass'];
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                $mail->Port = 587;
+                $mail->Port = $config['smtp_port'];
 
-                $mail->setFrom();
+                $mail->setFrom($config['smtp_user'], $config['smtp_name']);
                 $mail->addAddress($email);
 
                 $mail->isHTML(true);
