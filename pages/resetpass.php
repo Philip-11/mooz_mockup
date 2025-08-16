@@ -1,9 +1,11 @@
 <?php 
 
 require_once '../lib/connect.php';
+require_once '../lib/auth.php';
 
 $email = $_GET['email'] ?? '';
 $token = $_GET['token'] ?? '';
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
@@ -35,6 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             <input type="password" name="password" required>
             <button type="submit">Reset Password</button>
           </form>';
-}
+}	
 
 ?>
