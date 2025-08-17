@@ -19,12 +19,17 @@ if ($email && $token) {
 			$password = trim($_POST['newpassword']);
 			$newPassword = password_hash($password, PASSWORD_DEFAULT);
 
-			$sql2 = 'UPDATE users SET password = :password, reset_token=NULL, reset_expires=NULL WHERE email = :email';
-			$stmt2 = $conn->prepare($sql2);
-			$stmt2->execute(array('password' => $newPassword, 'email' => $email));
+
+			if (!isOldPassword($password, $email, $conn)) {
+				$sql2 = 'UPDATE users SET password = :password, reset_token=NULL, reset_expires=NULL WHERE email = :email';
+				$stmt2 = $conn->prepare($sql2);
+				$stmt2->execute(array('password' => $newPassword, 'email' => $email));
 
 
-			header("Location: " . BASE_URL . "pages/login.php?reset=success");
+				header("Location: " . BASE_URL . "pages/login.php?reset=success");
+			} else {
+				echo "Use a new password";
+			}
 		} else {
 			require '../templates/resetpass-form.php';
 		}
