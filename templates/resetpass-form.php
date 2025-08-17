@@ -17,23 +17,27 @@ require_once '../lib/common.php';
     <main>
         <section class="container px-4 py-5">
             <div class="w-100 mx-auto" style="max-width: 330px;">
-                <form action="<?php echo htmlEscape($_SERVER['PHP_SELF']); ?>" method="post">
+                <form method="POST">
                     <img class="mb-4" src="<?php echo BASE_URL; ?>public/index/cow-svgrepo-com.svg" width="50" height="50" alt="">
 
                     <h1 class="h3 mb-3 fw-bold">Change Your Password</h1>
 
                     <div class="form-floating mb-3">
-                        <input class="form-control <?php echo ($loginFailed == true) ? 'is-invalid' : '' ?>" type="password" name="old-password" id="old-password" placeholder="" required>
-                        <label for="old-password">Old Password</label>
-                        <div id="old-password" class="invalid-feedback">
+                        <input type="hidden" name="email" value="<?= htmlEscape($email) ?>">
+                        <input type="hidden" name="token" value="<?= htmlEscape($token) ?>">
+                        <input class="form-control <?php echo ($loginFailed == true) ? 'is-invalid' : ''
+                                                    ?>" type="password" name="oldpassword" id="oldpassword" placeholder="" required>
+                        <label for="oldpassword">Old Password</label>
+                        <div id="oldpassword" class="invalid-feedback">
                             Please check the password you typed.
                         </div>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input class="form-control <?php echo ($loginFailed == true) ? 'is-invalid' : '' ?>" type="password" name="new-password" id="new-password" placeholder="password" required>
-                        <label for="new-password">New Password</label>
-                        <div id="new-password" class="invalid-feedback">
+                        <input class="form-control <?php echo ($loginFailed == true) ? 'is-invalid' : ''
+                                                    ?>" type="password" name="newpassword" id="newpassword" placeholder="password" required>
+                        <label for="newpassword">New Password</label>
+                        <div id="newpassword" class="invalid-feedback">
                             Please check the password you typed.
                         </div>
                     </div>

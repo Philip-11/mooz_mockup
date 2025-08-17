@@ -1,4 +1,3 @@
-
 <?php
 require_once '../lib/connect.php';
 
@@ -41,7 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <main>
         <section class="container px-4 py-5">
+
             <div class="w-100 mx-auto" style="max-width: 330px;">
+                <?php if (isset($_GET['reset']) && $_GET['reset'] === 'success') {
+                    echo "<div class='alert alert-success text-center' role='alert'> Password Successfully Updated. You can now login. </div>";
+                } ?>
                 <form action="<?php echo htmlEscape($_SERVER['PHP_SELF']); ?>" method="post">
                     <img class="mb-4" src="<?php echo BASE_URL ?>public/index/cow-svgrepo-com.svg" width="50" height="50" alt="">
 
@@ -71,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="checkbox" name="checkDefault" id="checkDefault" class="form-check-input" value="remember-me">
                         <label class="form-check-label" for="checkDefault">Remember me</label>
                     </div>
-                    
+
                     <p class="mb-3 text-body-secondary">By proceeding, you agree to our terms and services</p>
                     <div class="pb-2">
                         <a href="forgotpass.php">Forgot Password?</a>
