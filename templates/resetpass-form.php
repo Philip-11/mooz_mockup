@@ -25,12 +25,6 @@ require_once '../lib/common.php';
                     <div class="form-floating mb-3">
                         <input type="hidden" name="email" value="<?= htmlEscape($email) ?>">
                         <input type="hidden" name="token" value="<?= htmlEscape($token) ?>">
-                        <input class="form-control <?php echo ($loginFailed == true) ? 'is-invalid' : ''
-                                                    ?>" type="password" name="oldpassword" id="oldpassword" placeholder="" required>
-                        <label for="oldpassword">Old Password</label>
-                        <div id="oldpassword" class="invalid-feedback">
-                            Please check the password you typed.
-                        </div>
                     </div>
 
                     <div class="form-floating mb-3">
