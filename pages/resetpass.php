@@ -35,8 +35,8 @@ if ($email && $token) {
 			require '../templates/resetpass-form.php';
 		}
 	} else {
-		echo "Invalid or expired token";
+		require '../templates/404_page.php';
 	}
 } else {
-	echo "Invalid or expired token";
+	require '../templates/404_page.php';
 }
