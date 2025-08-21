@@ -28,7 +28,8 @@ if ($email && $token) {
 
 				header("Location: " . BASE_URL . "pages/login.php?reset=success");
 			} else {
-				echo "Use a new password";
+				$passwordCheck = false;
+				require '../templates/resetpass-form.php';
 			}
 		} else {
 			require '../templates/resetpass-form.php';

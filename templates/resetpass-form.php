@@ -28,11 +28,11 @@ require_once '../lib/common.php';
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input class="form-control <?php echo ($loginFailed == true) ? 'is-invalid' : ''
+                        <input class="form-control <?php echo ($passwordCheck === false) ? 'is-invalid' : ''
                                                     ?>" type="password" name="newpassword" id="newpassword" placeholder="password" required>
                         <label for="newpassword">New Password</label>
                         <div id="newpassword" class="invalid-feedback">
-                            Please check the password you typed.
+                            Please use a new password
                         </div>
                     </div>
 
