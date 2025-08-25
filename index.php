@@ -9,7 +9,7 @@ Session::start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mooz</title>
-    <?php echo $favicon ?>
+    <link rel="Mooz icon" href="/mooz_mockup/public/index/cow-svgrepo-com.svg" type="image/x-icon">
 </head>
 
 <body>
