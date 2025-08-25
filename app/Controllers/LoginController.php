@@ -1,8 +1,10 @@
 <?php
-session_start();
 
 require_once "../Core/Database.php";
 require_once "../Models/User.php";
+require_once "../Core/Session.php";
+
+Session::start();
 
 $conn = Database::connect();
 

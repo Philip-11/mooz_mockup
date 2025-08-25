@@ -1,5 +1,6 @@
 <?php
-require_once 'lib/common.php'
+require_once "app/Core/Session.php";
+Session::start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
