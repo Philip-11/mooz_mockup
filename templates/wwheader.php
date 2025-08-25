@@ -33,11 +33,11 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
         <div class="col-md-3 text-end">
             <?php
-            if (isset($_SESSION['logged_in'])) {
+            if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === false) {
                 echo '<a class="btn btn-primary me-2" href="' . BASE_URL . 'logout.php">Logout</a>';
             } else {
                 echo '
-                <a class="btn btn-outline-primary me-2" href="' . BASE_URL . 'pages/login.php">Login</a>
+                <a class="btn btn-outline-primary me-2" href="' . BASE_URL . 'app/Views/LoginForm.php">Login</a>
                 <a class="btn btn-primary me-2" href="' . BASE_URL . 'pages/signup.php">Signup</a>
                 ';
             }

@@ -1,7 +1,6 @@
 <?php
-// require_once "app/Core/Session.php";
-// Session::start();
-define("BASE_URL", "/mooz_mockup/");
+require_once "app/Core/Session.php";
+Session::start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +15,7 @@ define("BASE_URL", "/mooz_mockup/");
 <body>
 
     <main>
-        <?php require 'templates/header.php' ?>
+        <?php require 'app/Templates/header.php' ?>
 
         <section class="container px-4 py-5 my-5 text-center">
             <img class="d-block mx-auto mb-4" width="72" height="57" src="public/index/cow-svgrepo-com.svg" alt="A Cow">

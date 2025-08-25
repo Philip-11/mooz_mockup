@@ -17,7 +17,7 @@
                 <?php if (isset($_GET['reset']) && $_GET['reset'] === 'success') {
                     echo "<div class='alert alert-success text-center' role='alert'> Password Successfully Updated. You can now login. </div>";
                 } ?>
-                <form action="../Controllers/Login.php" method="post">
+                <form action="../Controllers/LoginController.php" method="post">
                     <img class="mb-4" src="/mooz_mockup/public/index/cow-svgrepo-com.svg" width="50" height="50" alt="">
 
                     <h1 class="h3 mb-3 fw-normal">Login</h1>

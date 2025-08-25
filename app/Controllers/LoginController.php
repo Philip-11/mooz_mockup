@@ -4,6 +4,8 @@ require_once "../Core/Database.php";
 require_once "../Models/User.php";
 require_once "../Core/Session.php";
 
+define("BASE_URL", "/mooz_mockup/");
+
 Session::start();
 
 $conn = Database::connect();

@@ -1,9 +1,8 @@
 <?php
-require_once 'lib/common.php';
+require_once "app/Core/Session.php";
 
-
-session_unset();
-session_destroy();
+Session::start();
+Session::destroy();
 
 header("Location: index.php");
 exit();
