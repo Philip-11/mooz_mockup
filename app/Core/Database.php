@@ -1,6 +1,4 @@
 <?php
-require_once '/home/philip/Projects/mooz_mockup/lib/common.php';
-
 class Database
 {
     private const DB_HOST = "localhost";
