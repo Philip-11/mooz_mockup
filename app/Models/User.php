@@ -18,27 +18,15 @@ class User
 
     function login(): bool
     {
-        $email = htmlspecialchars($this->email, ENT_HTML5, 'UTF-8');
-        $password = htmlspecialchars($this->password, ENT_HTML5, 'UTF-8');
-
         $sql = "SELECT * FROM users WHERE email = :email";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute(array(
-            'email' => $email,
+            'email' => $this->email,
         ));
         $user = $stmt->fetch();
 
-        if ($user && password_verify($password, $user['password'])) {
-            $_SESSION['logged_in'] = true;
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['email'] = $user['email'];
 
-            header("Location: " . BASE_URL . "index.php");
-            exit();
-        } else {
-            return false;
-        }
-
-        return true;
+        //will return true if successful login
+        return $user && password_verify($this->password, $user['password']);
     }
 }
