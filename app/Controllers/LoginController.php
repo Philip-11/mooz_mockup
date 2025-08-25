@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 require_once "../Core/Database.php";
@@ -16,13 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     if ($user->login()) {
+        $data = $user->getUserData();
         $_SESSION['logged_in'] = true;
-        $_SESSION['id'] = $user['id'];
-        $_SESSION['email'] = $user['email'];
+        $_SESSION['id'] = $data['id'];
+        $_SESSION['email'] = $data['email'];
 
         header("Location: " . BASE_URL . "index.php");
         exit();
     } else {
-        $loginFailed = true;
+        $_SESSION['error'] = true;
+        header("Location: " . BASE_URL . "app/Views/LoginForm.php?error=1");
+        exit();
     }
 }

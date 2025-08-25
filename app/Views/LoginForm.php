@@ -1,11 +1,3 @@
-<?php
-define("BASE_URL", "/mooz_mockup/");
-
-session_start();
-$error = $_SESSION['error'] ?? '';
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +8,7 @@ $error = $_SESSION['error'] ?? '';
 </head>
 
 <body>
-    <?php require '../templates/header.php' ?>
+    <?php require "../Templates/header.php" ?>
 
     <main>
         <section class="container px-4 py-5">
@@ -25,13 +17,15 @@ $error = $_SESSION['error'] ?? '';
                 <?php if (isset($_GET['reset']) && $_GET['reset'] === 'success') {
                     echo "<div class='alert alert-success text-center' role='alert'> Password Successfully Updated. You can now login. </div>";
                 } ?>
-                <form action="../app/Controllers/Login.php" method="post">
-                    <img class="mb-4" src="<?php echo BASE_URL ?>public/index/cow-svgrepo-com.svg" width="50" height="50" alt="">
+                <form action="../Controllers/Login.php" method="post">
+                    <img class="mb-4" src="/mooz_mockup/public/index/cow-svgrepo-com.svg" width="50" height="50" alt="">
 
                     <h1 class="h3 mb-3 fw-normal">Login</h1>
 
                     <div class="form-floating mb-3">
-                        <input class="form-control <?php echo ($error === true) ? 'is-invalid' : '' ?>" type="email" name="email" id="email" placeholder="name@example.com" required>
+                        <input class="form-control <?php if (isset($_GET['error']) && $_GET['error'] == 1) {
+                                                        echo 'is-invalid';
+                                                    } ?>" type="email" name="email" id="email" placeholder="name@example.com" required>
                         <label for="email">Email address</label>
                         <div id="email" class="invalid-feedback">
                             Please check the email you typed.
@@ -41,7 +35,9 @@ $error = $_SESSION['error'] ?? '';
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input class="form-control <?php echo ($error === true) ? 'is-invalid' : '' ?>" type="password" name="password" id="password" placeholder="password" required>
+                        <input class="form-control <?php if (isset($_GET['error']) && $_GET['error'] == 1) {
+                                                        echo 'is-invalid';
+                                                    } ?>" type="password" name="password" id="password" placeholder="password" required>
                         <label for="password">Password</label>
                         <div id="email" class="invalid-feedback">
                             Please check the password you typed.
@@ -67,8 +63,8 @@ $error = $_SESSION['error'] ?? '';
 
     </main>
 
-    <?php require '../templates/footer.php' ?>
-    <?php require '../lib/bootstrap.php' ?>
+    <?php require "../Templates/footer.php" ?>
+    <?php require "/home/philip/Projects/mooz_mockup/lib/bootstrap.php" ?>
 </body>
 
 </html>
