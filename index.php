@@ -1,6 +1,7 @@
 <?php
-require_once "app/Core/Session.php";
-Session::start();
+// require_once "app/Core/Session.php";
+// Session::start();
+define("BASE_URL", "/mooz_mockup/");
 ?>
 <!DOCTYPE html>
 <html lang="en">
