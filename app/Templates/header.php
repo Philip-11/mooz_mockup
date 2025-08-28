@@ -38,7 +38,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             } else {
                 echo '
                 <a class="btn btn-outline-primary me-2" href="' . BASE_URL . 'app/Views/LoginForm.php">Login</a>
-                <a class="btn btn-primary me-2" href="' . BASE_URL . 'pages/signup.php">Signup</a>
+                <a class="btn btn-primary me-2" href="' . BASE_URL . 'app/Views/RegisterForm.php">Signup</a>
                 ';
             }
             ?>

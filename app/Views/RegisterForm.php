@@ -13,18 +13,22 @@
     <main>
         <section class="container px-4 py-5">
             <div class="w-100 mx-auto" style="max-width: 330px;">
-                <form action="" method="post">
+                <form action="../Controllers/RegisterController.php" method="post">
                     <img class="mb-4" src="<?php echo BASE_URL ?>public/index/cow-svgrepo-com.svg" width="50" height="50" alt="">
                     <h1 class="h3 mb-3 fw-normal">Signup</h1>
                     <div class="form-floating mb-3">
-                        <input class="form-control <?php echo ($registered == true) ? 'is-valid' : '' ?>" type="email" name="email" id="email" placeholder="name@example.com" required>
+                        <input class="form-control <?php if (isset($_GET['success']) && $_GET['success'] == 1) {
+                                                        echo 'is-valid';
+                                                    } ?>" type="email" name="email" id="email" placeholder="name@example.com" required>
                         <label for="email">Email address</label>
                         <div id="email" class="valid-feedback">
                             Success!
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <input class="form-control <?php echo ($registered == true) ? 'is-valid' : '' ?>" type="password" name="password" id="password" placeholder="password" required>
+                        <input class="form-control <?php if (isset($_GET['success']) && $_GET['success'] == 1) {
+                                                        echo 'is-valid';
+                                                    } ?>" type="password" name="password" id="password" placeholder="password" required>
                         <label for="password">Password</label>
                         <div id="password" class="valid-feedback">
                             Success!
