@@ -32,6 +32,22 @@ class User
         return false;
     }
 
+    function register(): bool
+    {
+        $sql = "INSERT INTO users (email, password) VALUES (:email, :password)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(array(
+            'email' => $this->email,
+            'password' => $this->password,
+        ));
+
+        if ($stmt) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     function getUserData(): array
     {
         return $this->userData;

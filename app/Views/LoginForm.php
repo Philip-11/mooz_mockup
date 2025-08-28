@@ -64,7 +64,7 @@
     </main>
 
     <?php require "../Templates/footer.php" ?>
-    <?php require "/home/philip/Projects/mooz_mockup/lib/bootstrap.php" ?>
+    <?php require "../../lib/bootstrap.php" ?>
 </body>
 
 </html>
