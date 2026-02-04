@@ -84,10 +84,10 @@ require_once 'lib/common.php'
                 <div class="col">
                     <div class="d-flex align-items-center px-3">
                         <div style="width: 10rem; height: 10rem; border-radius: 100%; overflow:hidden; " class="px-3">
-                            <img src="public/index/id1.jpg" style="object-fit:cover;" class="img-fluid" alt="">
+                            <img src="public/index/catid.webp" style="object-fit:cover;" class="img-fluid" alt="">
                         </div>
                         <div>
-                            <h4>Johnyela Mayo</h4>
+                            <h4>Cat User</h4>
                             <h5>Virtual Assistant</h5>
                             <p class="fw-semibold py-3">Mooz really changes how I communicate with my clients. Truly revolutionary. <br> ⭐⭐⭐⭐⭐</p>
                         </div>
@@ -98,10 +98,10 @@ require_once 'lib/common.php'
                 <div class="col">
                     <div class="d-flex align-items-center px-3">
                         <div style="width: 10rem; height: 10rem; border-radius: 100%; overflow:hidden; " class="px-3">
-                            <img src="public/index/id2.jpg" style="object-fit:cover;" class="img-fluid" alt="">
+                            <img src="public/index/catid.webp" style="object-fit:cover;" class="img-fluid" alt="">
                         </div>
                         <div>
-                            <h4>John Philip Magsaysay</h4>
+                            <h4>Cat User</h4>
                             <h5>Virtual Assistant</h5>
                             <p class="fw-semibold py-3">Mooz really changes how I communicate with my clients. Truly revolutionary. <br> ⭐⭐⭐⭐⭐</p>
                         </div>
@@ -112,10 +112,10 @@ require_once 'lib/common.php'
                 <div class="col">
                     <div class="d-flex align-items-center px-3">
                         <div style="width: 10rem; height: 10rem; border-radius: 100%; overflow:hidden; " class="px-3">
-                            <img src="public/index/id2.jpg" style="object-fit:cover;" class="img-fluid" alt="">
+                            <img src="public/index/catid.webp" style="object-fit:cover;" class="img-fluid" alt="">
                         </div>
                         <div>
-                            <h4>John Philip Magsaysay</h4>
+                            <h4>Cat User</h4>
                             <h5>Virtual Assistant</h5>
                             <p class="fw-semibold py-3">Mooz really changes how I communicate with my clients. Truly revolutionary. <br> ⭐⭐⭐⭐⭐</p>
                         </div>
@@ -126,10 +126,10 @@ require_once 'lib/common.php'
                 <div class="col">
                     <div class="d-flex align-items-center px-3">
                         <div style="width: 10rem; height: 10rem; border-radius: 100%; overflow:hidden; " class="px-3">
-                            <img src="public/index/id1.jpg" style="object-fit:cover;" class="img-fluid" alt="">
+                            <img src="public/index/catid.webp" style="object-fit:cover;" class="img-fluid" alt="">
                         </div>
                         <div>
-                            <h4>Johnyela Mayo</h4>
+                            <h4>Cat User</h4>
                             <h5>Virtual Assistant</h5>
                             <p class="fw-semibold py-3">Mooz really changes how I communicate with my clients. Truly revolutionary. <br> ⭐⭐⭐⭐⭐</p>
                         </div>
